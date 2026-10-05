@@ -23,6 +23,10 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - uses: actions/configure-pages@v5
+        with:
+          # Activa Pages (fuente: GitHub Actions) si aún no lo está
+          enablement: true
       - run: npm ci
       - run: npm test
       - run: npm run build
